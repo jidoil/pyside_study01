@@ -1,12 +1,12 @@
 from PySide2.QtWidgets import QApplication
 import sys
-from ButtonHolder import Button_Holder
-from RockWidget import RockWidget
-from Slider import Slider
+from main_widget import main_window
+
 
 app = QApplication(sys.argv)
 
-window = RockWidget()
+# window = RockWidget()
+window = main_window(app)
 
 window.show()
 
