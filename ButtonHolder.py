@@ -11,5 +11,4 @@ class Button_Holder(QMainWindow):
         self.setGeometry(0, 0, 1000, 1000)
         button = QPushButton("Click me")
         self.setCentralWidget(button)
-        button.setChecked(True)
         button.clicked.connect(OnClick)
