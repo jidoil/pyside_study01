@@ -8,6 +8,7 @@ from QCheckBoxAndRadioButton.CheckBoxWidget import CheckBoxWidget
 from QGridLayout.grid_layout import GridWidget
 from QLabelAndImages.label_and_images import LabelAndImages
 from QMessageBox.Message import MessageBox
+from QTabWidget.TabWidget import TabWidget
 from QTextEdit.text_edit_widget import Text_Edit
 from SizePolicy.size_widget import SizeWidget
 
@@ -22,7 +23,9 @@ app = QApplication(sys.argv)
 # window = SizeWidget()
 # window = GridWidget()
 # window = CheckBoxWidget()
-window = ListWidget()
+# window = ListWidget()
+window = TabWidget()
+
 
 window.show()
 sys.exit(app.exec_())
