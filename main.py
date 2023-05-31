@@ -4,6 +4,7 @@ import sys
 from LabelAndLineEdit.LabelAndLine import LabelAndLine
 from Main.MainWindow import MainWindow
 from PushBox.PushBox import PushButton
+from QGridLayout.grid_layout import GridWidget
 from QLabelAndImages.label_and_images import LabelAndImages
 from QMessageBox.Message import MessageBox
 from QTextEdit.text_edit_widget import Text_Edit
@@ -16,6 +17,8 @@ app = QApplication(sys.argv)
 # window = LabelAndLine()
 # window = Text_Edit()
 # window = LabelAndImages()
-window = SizeWidget()
+# window = SizeWidget()
+
+window = GridWidget()
 window.show()
 sys.exit(app.exec_())
