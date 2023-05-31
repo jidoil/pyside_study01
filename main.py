@@ -5,6 +5,7 @@ from ListWidget import ListWidget
 from Main.MainWindow import MainWindow
 from PushBox.PushBox import PushButton
 from QCheckBoxAndRadioButton.CheckBoxWidget import CheckBoxWidget
+from QComboBox.combo_box_widget import ComboBoxWidget
 from QGridLayout.grid_layout import GridWidget
 from QLabelAndImages.label_and_images import LabelAndImages
 from QMessageBox.Message import MessageBox
@@ -24,8 +25,8 @@ app = QApplication(sys.argv)
 # window = GridWidget()
 # window = CheckBoxWidget()
 # window = ListWidget()
-window = TabWidget()
-
+# window = TabWidget()
+window = ComboBoxWidget()
 
 window.show()
 sys.exit(app.exec_())
