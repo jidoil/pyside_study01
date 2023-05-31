@@ -4,6 +4,7 @@ import sys
 from LabelAndLineEdit.LabelAndLine import LabelAndLine
 from Main.MainWindow import MainWindow
 from PushBox.PushBox import PushButton
+from QCheckBoxAndRadioButton.CheckBoxWidget import CheckBoxWidget
 from QGridLayout.grid_layout import GridWidget
 from QLabelAndImages.label_and_images import LabelAndImages
 from QMessageBox.Message import MessageBox
@@ -18,7 +19,9 @@ app = QApplication(sys.argv)
 # window = Text_Edit()
 # window = LabelAndImages()
 # window = SizeWidget()
+# window = GridWidget()
+window = CheckBoxWidget()
 
-window = GridWidget()
+
 window.show()
 sys.exit(app.exec_())
