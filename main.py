@@ -4,6 +4,7 @@ import sys
 from LabelAndLineEdit.LabelAndLine import LabelAndLine
 from Main.MainWindow import MainWindow
 from PushBox.PushBox import PushButton
+from QLabelAndImages.label_and_images import LabelAndImages
 from QMessageBox.Message import MessageBox
 from QTextEdit.text_edit_widget import Text_Edit
 
@@ -12,7 +13,8 @@ app = QApplication(sys.argv)
 # window = MessageBox()
 # window = PushButton()
 # window = LabelAndLine()
+# window = Text_Edit()
 
-window = Text_Edit()
+window = LabelAndImages()
 window.show()
-app.exec_()
+sys.exit(app.exec_())
