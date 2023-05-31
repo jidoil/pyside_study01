@@ -1,3 +1,5 @@
+from PySide2 import QtWidgets
+from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QApplication
 import sys
 from LabelAndLineEdit.LabelAndLine import LabelAndLine
@@ -13,7 +15,6 @@ from QTabWidget.TabWidget import TabWidget
 from QTextEdit.text_edit_widget import Text_Edit
 from SizePolicy.size_widget import SizeWidget
 
-app = QApplication(sys.argv)
 
 # window = MainWindow(app)
 # window = MessageBox()
@@ -26,7 +27,21 @@ app = QApplication(sys.argv)
 # window = CheckBoxWidget()
 # window = ListWidget()
 # window = TabWidget()
-window = ComboBoxWidget()
+# window = ComboBoxWidget()
 
+
+loader = QUiLoader() #Set up a loader object
+
+app = QtWidgets.QApplication(sys.argv)
+window = loader.load("QUiLoader/widget.ui", None) #Load the ui - happens at run time!
+
+def do_something() :
+    print(window.full_name_line_edit.text(),"is a ", window.occupation_line_edit.text())
+
+#Changing the properties in the form
+window.setWindowTitle("User data")
+
+#Accessing widgets in the form
+window.submit_button.clicked.connect(do_something)
 window.show()
-sys.exit(app.exec_())
+app.exec_()
