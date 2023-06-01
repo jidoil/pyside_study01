@@ -13,6 +13,7 @@ from QLabelAndImages.label_and_images import LabelAndImages
 from QMessageBox.Message import MessageBox
 from QTabWidget.TabWidget import TabWidget
 from QTextEdit.text_edit_widget import Text_Edit
+from QUiLoaderV2.ui_loader_v2 import UserInterface
 from SizePolicy.size_widget import SizeWidget
 
 
@@ -20,7 +21,6 @@ from SizePolicy.size_widget import SizeWidget
 # window = MessageBox()
 # window = PushButton()
 # window = LabelAndLine()
-# window = Text_Edit()
 # window = LabelAndImages()
 # window = SizeWidget()
 # window = GridWidget()
@@ -30,18 +30,31 @@ from SizePolicy.size_widget import SizeWidget
 # window = ComboBoxWidget()
 
 
-loader = QUiLoader() #Set up a loader object
+# loader = QUiLoader() #Set up a loader object
+#
+# app = QtWidgets.QApplication(sys.argv)
+# window = loader.load("QUiLoader/widget.ui", None) #Load the ui - happens at run time!
+#
+# def do_something() :
+#     print(window.full_name_line_edit.text(),"is a ", window.occupation_line_edit.text())
+#
+# #Changing the properties in the form
+# window.setWindowTitle("User data")
+#
+# #Accessing w
+# idgets in the form
+# window.submit_button.clicked.connect(do_something)
+
+# app = QApplication()
+# window = CheckBoxWidget()
+# window.show()
+import sys
+
 
 app = QtWidgets.QApplication(sys.argv)
-window = loader.load("QUiLoader/widget.ui", None) #Load the ui - happens at run time!
 
-def do_something() :
-    print(window.full_name_line_edit.text(),"is a ", window.occupation_line_edit.text())
-
-#Changing the properties in the form
-window.setWindowTitle("User data")
-
-#Accessing widgets in the form
-window.submit_button.clicked.connect(do_something)
+window = UserInterface()
 window.show()
-app.exec_()
+
+
+sys.exit(app.exec_())

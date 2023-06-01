@@ -5,9 +5,7 @@ class Text_Edit(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Text Edit")
-
         self.text_edit = QTextEdit()
-
         current_text_button = QPushButton("Current Text")
         current_text_button.clicked.connect(self.current_text_button_clicked)
 
@@ -54,7 +52,7 @@ class Text_Edit(QWidget):
         self.text_edit.paste()
 
     def set_plain_text(self):
-        self.text_edit.setPlainText("Sed ut perspiciaste adf wef sdfadf")
+        self.text_edit.setPlainText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum feugiat nulla eu justo fringilla, at pretium velit tristique.Sed id sem nec leo tincidunt ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum feugiat nulla eu justo fringilla, at pretium velit tristique.Sed id sem nec leo tincidunt ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum feugiat nulla eu justo fringilla, at pretium velit tristique.Sed id sem nec leo tincidunt ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum feugiat nulla eu justo fringilla, at pretium velit tristique.Sed id sem nec leo tincidunt ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum feugiat nulla eu justo fringilla, at pretium velit tristique.Sed id sem nec leo tincidunt ultricies.")
 
     def set_html(self):
-        self.text_edit.setHtml("<h1>kigal</h1><p>adsfasdf a</p>")
+        self.text_edit.setHtml("<h1>HTML</h1><p>you didn't expect this</p><ul><li>qwer</li><li>zxcv</li><li>asdf</li></ul>")
